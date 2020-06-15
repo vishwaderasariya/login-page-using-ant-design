@@ -1,9 +1,46 @@
-@import url("https://fonts.googleapis.com/css2?family=Ramabhadra&display=swap");
-
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@600&display=swap");
 .App {
   text-align: center;
   justify-content: center;
   align-items: center;
   margin: auto;
   display: inline;
+}
+
+.btn-login-with-google {
+  margin: 150px 0 25px 0;
+  cursor: pointer;
+  font-size: medium;
+  font-family: "Roboto Slab", serif;
+  padding: 10px;
+  width: 21%;
+  border: 3px solid #000;
+  border-radius: 8px;
+  background-color: #fff;
+}
+
+Input {
+  border: 3px solid #000;
+  width: 20%;
+  border-radius: 5px;
+  margin-bottom: 30px;
+  padding: 10px;
+  height: 25px;
+}
+::placeholder {
+  font-family: "Roboto Slab", serif;
+  margin-left: 2em;
+}
+.btn-login {
+  color: #ffffff;
+  background-color: #000;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  font-size: medium;
+  padding: 10px;
+  margin-bottom: 30px;
+  font-family: "Roboto Slab", serif;
+  width: 21%;
+  height: 40px;
 }

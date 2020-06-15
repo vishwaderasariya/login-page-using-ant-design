@@ -13,92 +13,44 @@ function LoginPage() {
     >
       <div
         style={{
-          marginTop: "0px",
           backgroundColor: "#000",
-          height: "50px",
+          height: "40px",
           color: "#fff",
-          fontSize: "20px",
+          fontSize: "medium",
+          fontFamily: `"Roboto Slab", serif`,
           textAlign: "center",
+          lineHeight: "40px",
         }}
       >
         Login page
       </div>
-      <Form
-        style={{
-          display: "inline",
-          maxWidth: "900px",
-          backgroundColor: "#ffff44",
-        }}
-      >
-        <div>
-          <Button
-            style={{
-              border: "3px solid #000000",
-              borderRadius: "8px",
-              width: "20%",
-              padding: "10px",
-              fontFamily: "Ramabhadra', sans-serif;",
-              fontSize: "16px",
-              cursor: "pointer",
-              marginTop: "150px",
-              marginBottom: "25px",
-              backgroundColor: "#FFFFFF",
-            }}
-          >
-            <FcGoogle style={{ marginRight: "12px" }} />
-            Log in with Google
-          </Button>
-        </div>
-        <div style={{ marginBottom: "25px" }}>or</div>
-        <div>
-          <Input
-            size="50"
-            placeholder="Email"
-            style={{
-              border: "3px solid #000000",
-              width: "19%",
-              borderRadius: "5px",
-              marginBottom: "30px",
-              padding: "10px",
-              height: "25px",
-            }}
-          ></Input>
-        </div>
-        <div>
-          <Input
-            placeholder="Password"
-            style={{
-              border: "3px solid #000000",
-              width: "19%",
-              borderRadius: "5px",
-              marginBottom: "30px",
-              padding: "10px",
-              height: "25px",
-            }}
-          ></Input>
-        </div>
-        <div>
-          <Button
-            style={{
-              backgroundColor: "#000000",
-              color: "#ffffff",
-              width: "20%",
-              borderRadius: "8px",
-              border: "none",
-              padding: "10px",
-              cursor: "pointer",
-              height: "40px",
-              fontFamily: "Ramabhadra', sans-serif;",
-              marginBottom: "30px",
-            }}
-          >
-            Log In
-          </Button>
-        </div>
-      </Form>
+      <div>
+        <Button
+          className="btn-login-with-google"
+          onClick={(e) => {
+            e.preventDefault();
+            window.location.href =
+              "https://accounts.google.com/AddSession/signinchooser?hl=en&continue=https%3A%2F%2Fmail.google.com%2Fmail&service=mail&flowName=GlifWebSignIn&flowEntry=AddSession";
+          }}
+        >
+          <FcGoogle size={25} style={{ marginRight: "12px" }} />
+          Log in with Google
+        </Button>
+      </div>
+      <div style={{ marginBottom: "25px" }}>or</div>
+      <div>
+        <Input placeholder="Email" type="email"></Input>
+      </div>
+      <div>
+        <Input placeholder="Password" type="password"></Input>
+      </div>
+      <div>
+        <Button className="btn-login" htmlType="submit">
+          Log In
+        </Button>
+      </div>
       <div>
         <a href="#">Forget password?</a>
-
         <p>
           No account? <a href="#">reate one</a>
         </p>
